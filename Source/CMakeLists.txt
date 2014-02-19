@@ -33,8 +33,7 @@ ENDFOREACH(Package)
 #Set any libraries that your project depends on.
 #examples: ITKCommon, VTKRendering, etc
 SET(Libraries
-ITKCommon
-ITKIO
+  ${ITK_LIBRARIES}
 )
 
 #the following block of code is an example of how to build an executable in
