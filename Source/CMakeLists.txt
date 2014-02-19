@@ -8,18 +8,6 @@ PROJECT(ImageCopy)
 ENABLE_TESTING()
 INCLUDE(Dart)
 
-#Declare any external dependencies that your project may have here.
-#examples include: ITK, VTK, JPEG, PNG, OpenGL, ZLIB, Perl, Java
-#If you're not sure what name to use, look in the Modules directory of your
-#cmake install and check that a file named Find(Package).cmake exists
-#
-# The packages can be specified with a version number, for example:
-#
-# ITK 2.8.1
-# ITK 3.2.0
-#
-# If no version is specified, the most recent release of the package
-# will be used.
 SET(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 SET(Required_Packages
 ITK
@@ -37,19 +25,8 @@ SET(Libraries
   ${ITK_LIBRARIES}
 )
 
-#the following block of code is an example of how to build an executable in
-#cmake.  Unmodified, it will add an executable called "MyExe" to the project.
-#MyExe will be built using the files MyClass.h and MyClass.cxx, and it will
-#be linked to all the libraries you specified above. 
-#You can build more than one executable per project
 SET(CurrentExe "DumpIntensities")
 ADD_EXECUTABLE(${CurrentExe} DumpIntensities.cxx itkMultipleImageIterator.h) 
-TARGET_LINK_LIBRARIES(${CurrentExe} ${Libraries})
-SET(CurrentExe "ImageCompare")
-ADD_EXECUTABLE(${CurrentExe} ImageCompare.cxx) 
-TARGET_LINK_LIBRARIES(${CurrentExe} ${Libraries})
-SET(CurrentExe "ImageCopy")
-ADD_EXECUTABLE(${CurrentExe} ImageCopy.cxx) 
 TARGET_LINK_LIBRARIES(${CurrentExe} ${Libraries})
 
 #the following line is an example of how to add a test to your project.
@@ -58,7 +35,4 @@ TARGET_LINK_LIBRARIES(${CurrentExe} ${Libraries})
 #project or an external executable.  After that list any args that are needed
 #for this test.  Include as many tests as you like.  If your project doesn't have
 #any tests you can comment out or delete the following line.
-ADD_TEST(CreateImage ImageCopy ${CMAKE_SOURCE_DIR}/img1.png)
-ADD_TEST(CompareImage ImageCompare ${CMAKE_SOURCE_DIR}/img1.png ${CMAKE_SOURCE_DIR}/img1.png.base.png)
-
-#Once you're done modifying this template, you should rename it to "CMakeLists.txt"
+ADD_TEST(DumpIntensities DumpIntensities ${CMAKE_SOURCE_DIR}/img1.png ${CMAKE_SOURCE_DIR}/img2.png ${CMAKE_SOURCE_DIR}/img3.png) 
