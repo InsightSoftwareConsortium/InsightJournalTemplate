@@ -32,13 +32,14 @@ int main(int argc, char* argv[])
   }
 
   srand(42);
+  ofstream f("output.txt");
   for (it.GoToBegin(); !it.IsAtEnd(); ++it) {
     if (((float)rand()) / RAND_MAX < 0.1) {
       for (unsigned int i=0; i<it.Size(); ++i) {
-        if (i != 0) cout << ";";
-        cout << it[i].Get();
+        if (i != 0) f << ";";
+        f << it[i].Get();
       }
-      cout << endl;
+      f << endl;
     }
   }
 }

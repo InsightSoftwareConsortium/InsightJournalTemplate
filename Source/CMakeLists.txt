@@ -36,3 +36,4 @@ TARGET_LINK_LIBRARIES(${CurrentExe} ${Libraries})
 #for this test.  Include as many tests as you like.  If your project doesn't have
 #any tests you can comment out or delete the following line.
 ADD_TEST(DumpIntensities DumpIntensities ${CMAKE_SOURCE_DIR}/img1.png ${CMAKE_SOURCE_DIR}/img2.png ${CMAKE_SOURCE_DIR}/img3.png) 
+ADD_TEST(CheckValues diff output.txt ${CMAKE_SOURCE_DIR}/reference.txt)
