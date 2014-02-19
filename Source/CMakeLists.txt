@@ -42,6 +42,9 @@ SET(Libraries
 #MyExe will be built using the files MyClass.h and MyClass.cxx, and it will
 #be linked to all the libraries you specified above. 
 #You can build more than one executable per project
+SET(CurrentExe "DumpIntensities")
+ADD_EXECUTABLE(${CurrentExe} DumpIntensities.cxx itkMultipleImageIterator.h) 
+TARGET_LINK_LIBRARIES(${CurrentExe} ${Libraries})
 SET(CurrentExe "ImageCompare")
 ADD_EXECUTABLE(${CurrentExe} ImageCompare.cxx) 
 TARGET_LINK_LIBRARIES(${CurrentExe} ${Libraries})
