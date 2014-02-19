@@ -20,6 +20,7 @@ INCLUDE(Dart)
 #
 # If no version is specified, the most recent release of the package
 # will be used.
+SET(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 SET(Required_Packages
 ITK
 )
