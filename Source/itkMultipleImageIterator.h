@@ -26,6 +26,7 @@ public:
       it != m_iterators.end(); ++it) {
       ++(*it);
     }
+    return *this;
   }
   /// Rewind all iterators
   void GoToBegin() {
