@@ -43,7 +43,7 @@ public:
 #else
     assert(m_iterators.size());
     bool retval = m_iterators[0].IsAtEnd();
-    for (unsigned int i=0; i<=m_iterators.size();++i)
+    for (unsigned int i=0; i<m_iterators.size();++i)
       assert(m_iterators[i].IsAtEnd() == retval);
     return retval;
 #endif
