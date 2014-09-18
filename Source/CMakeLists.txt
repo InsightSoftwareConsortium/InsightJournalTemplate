@@ -1,3 +1,4 @@
+cmake_minimum_required(VERSION 2.8)
 INCLUDE(${CMAKE_SOURCE_DIR}/IJMacros.txt)
 
 #Change PROJECT_NAME to the name of your project
@@ -14,8 +15,8 @@ INCLUDE(Dart)
 #
 # The packages can be specified with a version number, for example:
 #
-# ITK 2.8.1
 # ITK 3.2.0
+# ITK 4.6.0
 #
 # If no version is specified, the most recent release of the package
 # will be used.
@@ -32,8 +33,7 @@ ENDFOREACH(Package)
 #Set any libraries that your project depends on.
 #examples: ITKCommon, VTKRendering, etc
 SET(Libraries
-ITKCommon
-ITKIO
+	${ITK_LIBRARIES}
 )
 
 #the following block of code is an example of how to build an executable in

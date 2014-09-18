@@ -7,7 +7,7 @@
 #include "itkImageFileWriter.h"
 #include "itkRescaleIntensityImageFilter.h"
 #include "itkExtractImageFilter.h"
-#include "itkDifferenceImageFilter.h"
+#include "itkTestingComparisonImageFilter.h"
 
 using namespace std;
 
@@ -136,7 +136,7 @@ int RegressionTestImage (const char *testImageFilename, const char *baselineImag
     }
 
   // Now compare the two images
-  typedef itk::DifferenceImageFilter<ImageType,ImageType> DiffType;
+  typedef itk::Testing::ComparisonImageFilter<ImageType,ImageType> DiffType;
   DiffType::Pointer diff = DiffType::New();
     diff->SetValidInput(baselineReader->GetOutput());
     diff->SetTestInput(testReader->GetOutput());
@@ -184,7 +184,7 @@ int RegressionTestImage (const char *testImageFilename, const char *baselineImag
       std::cout << status;
       std::cout <<  "</DartMeasurement>" << std::endl;
 
-      ::itk::OStringStream diffName;
+      std::ostringstream diffName;
         diffName << testImageFilename << ".diff.png";
       try
         {
@@ -209,7 +209,7 @@ int RegressionTestImage (const char *testImageFilename, const char *baselineImag
       std::cout << diffName.str();
       std::cout << "</DartMeasurementFile>" << std::endl;
       }
-    ::itk::OStringStream baseName;
+    std::ostringstream baseName;
     baseName << testImageFilename << ".base.png";
     try
       {
@@ -234,7 +234,7 @@ int RegressionTestImage (const char *testImageFilename, const char *baselineImag
     std::cout << baseName.str();
     std::cout << "</DartMeasurementFile>" << std::endl;
 
-    ::itk::OStringStream testName;
+    std::ostringstream testName;
     testName << testImageFilename << ".test.png";
     try
       {
