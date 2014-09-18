@@ -45,7 +45,7 @@ int main(int argc, char **argv)
 
   writer->SetInput(baselineReader->GetOutput());
 
-  ::itk::OStringStream baseName;
+  std::ostringstream baseName;
 
   baseName << argv[1] << ".base.png";
 
