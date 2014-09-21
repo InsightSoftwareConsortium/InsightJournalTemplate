@@ -23,15 +23,15 @@ colorlinks,linkcolor={blue},citecolor={blue},urlcolor={blue},
 ]{hyperref}
 
 
-%  This is a template for Papers to the Insight Journal. 
+%  This is a template for Papers to the Insight Journal.
 %  It is comparable to a technical report format.
 
 % The title should be descriptive enough for people to be able to find
-% the relevant document. 
+% the relevant document.
 \title{The Importance of Open Access in Scientific Publications}
 
-% 
-% NOTE: This is the last number of the "handle" URL that 
+%
+% NOTE: This is the last number of the "handle" URL that
 % The Insight Journal assigns to your paper as part of the
 % submission process. Please replace the number "1338" with
 % the actual handle number that you get assigned.
@@ -55,7 +55,7 @@ colorlinks,linkcolor={blue},citecolor={blue},urlcolor={blue},
 % Add hyperlink to the web location and license of the paper.
 % The argument of this command is the handler identifier given
 % by the Insight Journal to this paper.
-% 
+%
 \IJhandlefooter{\IJhandlerIDnumber}
 
 
@@ -63,7 +63,7 @@ colorlinks,linkcolor={blue},citecolor={blue},urlcolor={blue},
 \else
    %
    % Commands for including Graphics when using latex
-   % 
+   %
    \DeclareGraphicsExtensions{.eps,.jpg,.gif,.tiff,.bmp,.png}
    \DeclareGraphicsRule{.jpg}{eps}{.jpg.bb}{`convert #1 eps:-}
    \DeclareGraphicsRule{.gif}{eps}{.gif.bb}{`convert #1 eps:-}
@@ -86,10 +86,10 @@ colorlinks,linkcolor={blue},citecolor={blue},urlcolor={blue},
 \begin{abstract}
 \noindent
 This document describes a new algorithm implemented using the Insight Toolkit
-ITK \url{www.itk.org}.  The code of the algorithm is written following the 
+ITK \url{www.itk.org}.  The code of the algorithm is written following the
 ITK CodingStyle as described in the directory
 
-\code{Insight/Documentation/Style.pdf}
+\code{ITK/Documentation/Style.pdf}
 
 This paper is accompanied with the source code, input data, parameters and
 output data that the authors used for validating the algorithm described in
@@ -106,7 +106,7 @@ Using filters from the Insight Toolkit, we develop an algorithm for detecting
 and tracking thje movement of solar spots. As it is widely known, celestial
 objects such as the sun are ethereal and perfect, and therefore can not harbor
 artifacts such as spots. However, observations performed with our open source
-telescope have revealed the presence of such spots. The spots seems to continuously change positions on the solar surface. 
+telescope have revealed the presence of such spots. The spots seems to continuously change positions on the solar surface.
 
 Automatic detection and tracking of the solar spot movements are of fundamental
 importance for allowing the authors to dedicate more time to perfectioning
@@ -172,24 +172,6 @@ Like the following method of an ITK class.
 
 
 
-\section{Software Requirements}
-
-You need to have the following software installed:
-
-% The {itemize} environment uses a bullet for each \item.  If you want the 
-% \item's numbered, use the {enumerate} environment instead.
-\begin{itemize}
-  \item  Insight Toolkit 2.4.
-  \item  CMake 2.2
-\end{itemize}
-
-Note that other versions of the Insight Toolkit are also available in the
-testing framework of the Insight Journal. Please refere to the following page
-for details
-
-\url{http://www.insightsoftwareconsortium.org/wiki/index.php/IJ-Testing-Environment}
-
-
 % The preceding sections will have been written in a gentler,
 % introductory style.  You may also wish to include a reference
 % section, documenting all the functions/exceptions/constants.
@@ -238,7 +220,7 @@ interpolator and an optimizer.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %  Example on how to insert an equation.
-%  Never forget to put an equation in your paper. 
+%  Never forget to put an equation in your paper.
 %  They make them look professional and impress the reviewers.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
