@@ -34,14 +34,14 @@ ${NAME}.bbl: ${BIBTEXDATABSENAME}.bib ${NAME}.aux
 
 
 ${NAME}.dvi: ${NAME}.tex  ${BIBTEXDATABSENAME}.bib
-	latex ${NAME}.tex
+	latex -shell-escape ${NAME}.tex
 	bibtex ${NAME}
-	latex ${NAME}.tex
-	latex ${NAME}.tex
+	latex -shell-escape ${NAME}.tex
+	latex -shell-escape ${NAME}.tex
 
 
 ${NAME}.aux: ${NAME}.tex  ${BIBTEXDATABSENAME}.bib
-	latex ${NAME}.tex
+	latex -shell-escape ${NAME}.tex
 
 
 clean:

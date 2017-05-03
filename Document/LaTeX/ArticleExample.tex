@@ -9,6 +9,10 @@
 \documentclass{InsightArticle}
 
 \usepackage[dvips]{graphicx}
+\usepackage{color}
+\usepackage{minted}
+\definecolor{ltgray}{rgb}{0.93,0.93,0.93}
+\usemintedstyle{emacs}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -152,13 +156,11 @@ For questions on the basis of the scientific method the reader is refered to
 The format of this LaTeX file, allows authors to include code snippets, like
 the following
 
-\small
-\begin{verbatim}
+\begin{minted}[baselinestretch=1,fontsize=\footnotesize,linenos=false,bgcolor=ltgray]{cpp}
 typedef itk::Image< unsigned char, 3 > ImageType;
 
 ImageType::Pointer image = ImageType::New();
-\end{verbatim}
-\normalsize
+\end{minted}
 
 and to cite the online documentation of the Insitght Toolkit, for example, the
 link to the doxygen documentation of the ImageToImageFilter
