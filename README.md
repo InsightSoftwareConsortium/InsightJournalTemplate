@@ -1,6 +1,8 @@
 Insight Journal Template
 ========================
 
+[![Build LaTeX document](https://github.com/InsightSoftwareConsortium/InsightJournalTemplate/actions/workflows/build-test-latex.yml/badge.svg?branch=master)](https://github.com/InsightSoftwareConsortium/InsightJournalTemplate/actions/workflows/build-test-latex.yml)
+
 This repository contains a template for submitting Technical Reports to the
 Insight Journal:
 
