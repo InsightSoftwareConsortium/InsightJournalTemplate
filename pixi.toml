@@ -6,7 +6,7 @@ platforms = ["linux-64", "osx-arm64", "win-64"]
 
 [dependencies]
 # MyST ecosystem
-mystmd = ">=1.6.1,<2"
+mystmd = ">=1.8.0,<2"
 jupyter-book = "*"
 
 # Python scientific stack
