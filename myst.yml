@@ -59,7 +59,7 @@ project:
       output: exports/manuscript.docx
     - format: cff
     - format: meca
-      output: exports/manuscript.meca.zip
+      output: exports/article.meca.zip
 
   toc:
     - file: docs/index.md
