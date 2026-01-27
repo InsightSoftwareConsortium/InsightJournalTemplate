@@ -1,4 +1,4 @@
-[project]
+[workspace]
 name = "insight-journal-template"
 description = "A template for open science article submissions to the Insight Journal using MyST Markdown"
 channels = ["conda-forge"]
